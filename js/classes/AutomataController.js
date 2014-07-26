@@ -129,14 +129,15 @@ AutomataController.prototype.createAutomata = function(){
 		view = me.view,
 		initialRow = (initialRow = me.initialRowInput.val()) ? initialRow : "1",
 		ruleNumber = parseInt((ruleNumber = me.ruleInput.val()) ? ruleNumber : "30"),
-		cell = null;
+		cell = null,
+		rule = null;
 
 	me.animationDelay = parseInt((animationDelay = me.animationDelayInput.val()) ? animationDelay : 100);
 
 	///Validate Input
 	for(var i = 0; i < initialRow.length; i++){
 		cell = initialRow[i]
-		if( states.indexOf(cell) === -1 ){
+		if(states.indexOf(cell) === -1 ){
 			me.logError("Initial row must be in binary form (eg. 1, 111, or 10001)");
 			me.resetButtonsState();
 			return false;
@@ -201,7 +202,7 @@ AutomataController.prototype.logMessage = function(message, type, hideDelay){
 		type = type || "default",
 		hideDelay = hideDelay || 3000,
 		html = "<span class=\"label label-"+type+"\">"+message+"</span>";
-
+		
 		messageLog.show(100);
 		messageLog.html(html);
 		setTimeout(function(){

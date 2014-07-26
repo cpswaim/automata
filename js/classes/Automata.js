@@ -7,12 +7,14 @@ values for rule 30.
 ***/
 
 var Automata = function(cfg){
-	var me = this;
+	var me = this,
+		initialSteps = null;
+
 	me.states = (cfg.states) ? cfg.states : "01";
 	me.ruleSet = (cfg.ruleSet) ? cfg.ruleSet : "00011110";
 	me.initialRow = (cfg.initialRow) ? cfg.initialRow : "1";
 
-	var initialSteps = cfg.initialSteps;
+	initialSteps = cfg.initialSteps;
 
 	///If false or blank, by default will calculate the set number of steps (default 20)
 	me.map = (cfg.delayRender) ? [me.initialRow] : me.buildMap(initialSteps);
@@ -46,7 +48,6 @@ Automata.prototype.getRuleValue = function(rule){
 }
 
 Automata.prototype.calculateCellValue = function(firstValue, secondValue, thirdValue){
-
 	var me = this,
 		ruleSet = me.ruleSet,
 		value = rule = null;
@@ -100,7 +101,6 @@ Automata.prototype.getState = function(firstValue, secondValue, thirdValue){
 	}
 
 	return state;
-
 }
 
 ///Evolve to the next generation based on the parent row
