@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Rule 30</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+
+    <!-- Loading Classes -->
+    <script type="text/javascript" src="js/classes/Automata.js"></script>
+    <script type="text/javascript" src="js/classes/AutomataView.js"></script>
+    <script type="text/javascript" src="js/classes/AutomataController.js"></script>
+
+    <!--Application Start-->
+    <script type="text/javascript" src="js/app.js"></script>
+
+</head>
+	<body>
+        <div id="application" class="panel panel-primary">
+            <div id="toolbar" class="panel-heading">
+
+                <div id="actionRow">
+                    <span id="actionButtons">
+                        <label>Evolution Controls:</label>
+                        <button type="button" class="btn btn-default btn-sm" id="startButton">Start</button>
+                        <button type="button" class="btn btn-default btn-sm" id="stopButton" disabled=true>Stop</button>
+                        <button type="button" class="btn btn-default btn-sm" id="resetButton" disabled=true>Reset</button>
+                    </span>    
+                    <span id="messageLog"></span>
+                    <button type="button" class="btn btn-default btn-sm input-group input-group-sm" id="settingsButton"><i class="icon-wrench"></i> More Settings</button>
+                </div>
+
+                <div style="clear:both;"></div>
+
+                <div id="moreSettings" >
+                    <div id="initialInput">
+                        <div id="ruleInputGroup" class="input-group input-group-sm">
+                          <span class="input-group-addon">Rule #</span>
+                          <input id="ruleInput" type="text" class="form-control" maxlength=3 placeholder="30">
+                        </div>
+                        <div id="initialInputGroup" class="input-group input-group-sm">
+                          <span class="input-group-addon">Initial Row</span>
+                          <input id="initialRowInput" type="text" class="form-control" placeholder="1">
+                        </div>
+                        <div id="animationDelayInputGroup" class="input-group input-group-sm">
+                          <span class="input-group-addon">Animation Delay (ms)</span>
+                          <input id="animationDelayInput" type="text" class="form-control" placeholder="100">
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-default btn-sm" id="clearSettingsButton">Clear Settings</button>
+                
+                    <div style="clear:both;"></div>
+                    
+                    <label>When changing settings, please reset the current evolution for the new settings to take effect.</label>
+                
+                </div>
+
+                <div style="clear:both;"></div>
+            </div>
+            <div id="view" class="panel-body"></div>
+        </div>
+    </body>
+</html>

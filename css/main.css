@@ -1,0 +1,101 @@
+body{
+    padding:30px 20px 40px 20px;
+}
+#application{
+    width:100%;
+    min-width: 850px;
+}
+#view {
+    padding:10px;
+    text-align:center;
+    line-height:90%;
+    overflow: auto;
+    max-height: 80%;
+    font-family: 'FontAwesome';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+}
+#toolbar {
+    text-align:center;
+    padding:5px;
+}
+#inputRow > div{
+    margin: 5px;
+}
+#ruleInputGroup{
+    width:100px;
+    margin-bottom: 0px;
+    text-align:right; 
+    display: inline-table;
+}
+#initialInputGroup{
+    width:350px;
+    margin-bottom: 0px;
+    text-align:right; 
+    display: inline-table;
+}
+#animationDelayInputGroup{
+    width:190px;
+    margin-bottom: 0px;
+    display: inline-table;
+}
+#inputRow{
+    padding:2px;
+}
+#actionRow{
+    padding:2px;
+}
+#actionButtons{
+    float:left;
+}
+#messageLog, #moreSettings{
+    display: none;
+    padding:2px;
+}
+#messageLog{
+    padding:8px 5px 8px 5px;
+    text-align:left;
+    vertical-align: middle;
+    float:left;
+}
+#animateInputGroup .form-control{
+    width:20px;
+}
+#settingsButton{
+    float:right;
+}
+#initialInput{
+    float:left;
+    min-width: 700px;
+}
+#moreSettings .input-group{
+    padding:3px;
+}
+#toolbar .input-group-addon{
+    background-color: #E7E7E7;
+    color:#000;
+}
+#clearSettingsButton{
+    float:right;
+}
+.cell{
+    height:5px;
+    width:5px;
+}
+.cell-row{
+    line-height: 1em;
+}
+.alive-cell{
+    background-color: black;
+    width:10px;
+    height:10px;
+    border:1px black solid;
+    display:inline-block;
+}
+.dead-cell{
+    width:10px;
+    height:10px;
+    border:1px black solid;
+    display:inline-block;
+}
