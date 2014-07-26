@@ -79,6 +79,12 @@ body{
 #clearSettingsButton{
     float:right;
 }
+#links {
+    text-align: center;
+}
+#title {
+    text-align: center;
+}
 .cell{
     height:5px;
     width:5px;
